@@ -37,8 +37,20 @@ bool encryptFile(const string& inputFile, const string& key) {
     }
     
     // Generate output filename
-    string outputFile = "encrypted_" + inputFile;
+    //string outputFile = "encrypted_" + inputFile;
     
+/////////////////////////////////////////////////////////////////////////////////
+
+    // Extract just the filename from the path
+    int pos = inputFile.find_last_of("/\\");
+    string filename = (pos == string::npos) ? inputFile : inputFile.substr(pos + 1);
+
+    // Create output file in same folder (/data)
+    string outputFile = "/data/encrypted_" + filename;
+
+/////////////////////////////////////////////////////////////////////////////////
+
+
     ofstream fout;
     fout.open(outputFile, ios::out);
     if (!fout.is_open()) {
@@ -94,7 +106,16 @@ bool decryptFile(const string& inputFile, const string& key) {
     }
     
     // Generate output filename
-    string outputFile = "decrypted_" + inputFile;
+    //string outputFile = "decrypted_" + inputFile;
+    
+/////////////////////////////////////////////////////////////////////////////////
+
+    int pos = inputFile.find_last_of("/\\");
+    string filename = (pos == string::npos) ? inputFile : inputFile.substr(pos + 1);
+    string outputFile = "/data/decrypted_" + filename;
+
+/////////////////////////////////////////////////////////////////////////////////
+
     
     ofstream fout;
     fout.open(outputFile, ios::out);
