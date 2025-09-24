@@ -2,6 +2,19 @@
 
 A simple interactive command-line tool written in C++ for encrypting and decrypting files using a sophisticated three-digit key encryption system.
 
+## Docker Usage
+
+You can use this tool without compiling it locally by running the Docker image:
+
+### Pull the image
+
+Run-"docker pull <your-docker-username>/cpp-encrypter:latest"
+
+### Run the container
+
+Run-"docker run -it --rm -v /path/to/your/files:/data <your-docker-username>/cpp-encrypter"
+Example-"docker run -it --rm -v /home/user/files:/data sambhav1501/cpp-encrypter"
+
 ## Features
 
 - **Interactive Interface**: User-friendly menu-driven interface
@@ -207,7 +220,10 @@ If you encounter issues:
 4. Ensure you're using the correct three-digit key for decryption
 5. Try different key combinations to understand the encryption behavior
 
-## Contributing
+## License
 
+This project is open source and available under the MIT License.
+
+## Contributing
 
 Feel free to submit issues, feature requests, or pull requests to improve this tool. 
