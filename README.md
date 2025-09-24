@@ -207,10 +207,7 @@ If you encounter issues:
 4. Ensure you're using the correct three-digit key for decryption
 5. Try different key combinations to understand the encryption behavior
 
-## License
-
-This project is open source and available under the MIT License.
-
 ## Contributing
+
 
 Feel free to submit issues, feature requests, or pull requests to improve this tool. 
